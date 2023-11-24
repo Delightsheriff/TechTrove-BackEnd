@@ -1,0 +1,25 @@
+{
+  "name": "techtrove-backend",
+  "version": "1.0.0",
+  "description": "My alx portfolio project backend built with node js, express and Mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Delightsheriff/TechTrove-BackEnd.git"
+  },
+  "author": "Amadi-Sheriff Delight",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
