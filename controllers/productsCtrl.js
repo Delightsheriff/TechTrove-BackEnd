@@ -5,7 +5,7 @@ const getAllProducts = async (req, res) => {
     const products = await Products.find();
     return res
       .status(200)
-      .json({ message: "Success", products, count: products.length });
+      .json({ message: "Success", count: products.length, products });
   } catch (err) {
     return res.status(500).json({ msg: err.message });
   }
@@ -39,7 +39,7 @@ const getOneProduct = async (req, res) => {
 
 const addOneProduct = async (req, res) => {
   try {
-    const { name, price, sale, category, image, salePercentageOff } = req.body;
+    const { name, price, sale, category, image, salePrice } = req.body;
 
     const newProduct = new Products({
       name,
@@ -47,7 +47,7 @@ const addOneProduct = async (req, res) => {
       sale,
       category,
       image,
-      salePercentageOff,
+      salePrice,
     });
     await newProduct.save();
 
