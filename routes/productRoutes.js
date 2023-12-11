@@ -1,4 +1,5 @@
 const express = require("express");
+//importing api functions
 const {
   getAllProducts,
   getOneProduct,
@@ -10,7 +11,7 @@ const {
 
 const router = express.Router();
 
-// API
+// API ENDPOINTS
 router.get("/all-products", getAllProducts);
 router.get("/product/:id", getOneProduct);
 router.post("/product", addOneProduct);
